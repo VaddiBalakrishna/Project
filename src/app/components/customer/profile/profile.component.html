@@ -1,0 +1,61 @@
+<h4 class="text-dark text-center">My Profile</h4>
+<br>
+<div class="col-6 offset-3">
+    <div class="card shadow-lg">
+        <div style="background-color: #143b64;" class="card-header text-light">{{customer}}</div>
+        <br>
+
+        <div class="card text-center">
+            <div class="card-header">
+              <form #searchCustomer="ngForm" (submit)="searchSubmit(searchCustomer)">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter username" aria-label="Recipient's username" aria-describedby="button-addon2" name="username" ngModel #username="ngModel">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2" value="Get Details">Submit</button>
+              </div>
+              </form>
+            </div>
+
+        <div class="card-body  text-center">
+
+            <div class="form-row form-group">
+                <div style="margin-left: 8px;" class="col card">
+                    <h5>Customer Id</h5>
+                    <p>{{customer.id}}</p>
+
+                </div>
+
+            <div class="form-row form-group">
+                <div style="margin-left: 8px;" class="col card">
+                    <h5>Name</h5>
+                    <p>{{customer.name}}</p>
+
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col card">
+                    <h5>companyName</h5>
+                    <p>{{customer.companyName}}</p>
+                </div>
+                <div style="margin-left: 8px;" class="col card">
+                    <h5>Email</h5>
+                    <p>{{customer.email}}</p>
+                </div>
+                <div style="margin-left: 8px;" class="col card">
+                    <h5>Mobile Number</h5>
+                    <p>{{customer.mobileNo}}</p>
+                </div>
+                <div style="margin-left: 8px;" class="col card">
+                    <h5>PanCard</h5>
+                    <p>{{customer.panCard}}</p>
+                </div>
+            </div>
+        </div>
+        <a style="margin-left: 15px;" routerLink='/editprofile' class="col-2 btn btn-sm btn-primary text-light">Edit</a>
+        <br>
+        <div class="card-footer shadow-lg" style="background-color: #143b64;">
+        </div>
+
+        <!-- <div style="background-color: #143b64; padding-top: 10px;" class="btn">
+        </div> -->
+    </div>
+</div>

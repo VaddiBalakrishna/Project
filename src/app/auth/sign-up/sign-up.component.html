@@ -1,0 +1,101 @@
+<div class="signup-section">
+  <form [formGroup]="signUpForm" (submit)="onSignUp()">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 signup">
+      <div class="card">
+        <h5 class="card-header">Sign Up - Request Access</h5>
+        <div class="card-body">
+          <div class="mb-3 alert alert-primary" *ngIf="msg">
+              {{msg}}
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name"
+            formControlName="name">
+            <span class="error_msg" *ngIf="signUpForm.controls['name'].touched &&
+                        signUpForm.controls['name'].invalid">
+              <span *ngIf="signUpForm.controls['name'].errors['required']">Name is required</span>
+              <span *ngIf="signUpForm.controls['name'].errors['pattern']">Valid name is required</span>
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="text" class="form-control" placeholder="Enter your email"
+            formControlName="name">
+            <span class="error_msg" *ngIf="signUpForm.controls['name'].touched &&
+                        signUpForm.controls['name'].invalid">
+              <span *ngIf="signUpForm.controls['name'].errors['required']">Email is required</span>
+              <span *ngIf="signUpForm.controls['name'].errors['pattern']">Valid Email is required</span>
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Company Name</label>
+            <input type="text" class="form-control" placeholder="Enter your company name"
+            formControlName="name">
+            <span class="error_msg" *ngIf="signUpForm.controls['name'].touched &&
+                        signUpForm.controls['name'].invalid">
+              <span *ngIf="signUpForm.controls['name'].errors['required']">Name is required</span>
+              <span *ngIf="signUpForm.controls['name'].errors['pattern']">Valid name is required</span>
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Mobile No</label>
+            <input type="tel" class="form-control" placeholder="Enter your Mobile No"
+            formControlName="mobileNo" pattern="[0-9]{10}">
+            <span class="error_msg" *ngIf="signUpForm.controls['mobileNo'].touched &&
+                        signUpForm.controls['mobileNo'].invalid">
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">PanCard</label>
+            <input type="text" class="form-control" placeholder="Enter pancard number" formControlName="address">
+            <span class="error_msg" *ngIf="signUpForm.controls['address'].touched">
+              <span *ngIf="signUpForm.controls['address'].errors['required']">Field is required</span>
+            </span>
+          </div>
+          
+          
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="email" class="form-control"  placeholder="name@hexa.com"
+            formControlName="username">
+            <span class="error_msg" *ngIf="signUpForm.controls['username'].touched &&
+              signUpForm.controls['username'].invalid">
+              <span *ngIf="signUpForm.controls['username'].errors['required']">Username is required</span>
+              <span *ngIf="signUpForm.controls['username'].errors['pattern']">please enter valid email</span>
+            </span>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="password">
+
+            <span class="error_msg" *ngIf="signUpForm.controls['password'].touched &&
+              signUpForm.controls['password'].invalid">
+              <span *ngIf="signUpForm.controls['password'].errors['required']">Password is required</span>
+              <span *ngIf="signUpForm.controls['password'].errors['pattern']">Password can have alphabets, digits @ _ #</span>
+              <span *ngIf="signUpForm.controls['password'].errors['minlength']">Password should be min 5 chars</span>
+              <span *ngIf="signUpForm.controls['password'].errors['maxlength']">Password should be max 15 chars</span>
+            </span>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Re-Password</label>
+            <input type="password" class="form-control" formControlName="repassword">
+          </div>
+          <div class="mb-3">
+              <input type="submit" class="btn btn-primary" value="Sign Up" [disabled]="!signUpForm.valid">
+          </div>
+          <div class="mb-3">
+            Already Registered<a routerLink="/login" class="btn btn-secondary">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  </form>
+</div>

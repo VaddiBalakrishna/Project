@@ -1,0 +1,95 @@
+<div id="container">
+ 
+  <!-- <div class="col-md-12">
+    <app-navbar></app-navbar>
+  </div> -->
+<div>
+    <div class="row">
+        <div class="col-md-3 sidebar">
+          <div >
+              <!-- <img src="../../../assets/images/user.png" class="user-logo"> -->
+  
+              <!-- <span class="welcome-msg"> Welcome {{admin?.name}} </span> -->
+          </div>
+          <div>
+            <br>
+            <html>
+  <head>
+ 
+  </head>
+  <body><div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="/customer/profile">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Profile
+                        </span>
+                    </a>
+                  
+                </li>
+               
+              <li class="has-subnav">
+                    <a href="/customer/customer-documents">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                          DOCUMENTS
+                        </span>
+                    </a>
+                    
+                </li>  
+                
+                <li class="has-subnav">
+                  <a href="/customer/change-password">
+                      <i class="fa fa-laptop fa-2x"></i>
+                      <span class="nav-text">
+                          Change Password
+                      </span>
+                  </a>
+                  
+              </li>
+
+              <li class="has-subnav">
+                <a href="/customer/update-profile">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Update Profile
+                    </span>
+                </a>
+                
+            </li>
+
+            <li class="has-subnav">
+              <a href="/requests/Add Request">
+                  <i class="fa fa-laptop fa-2x"></i>
+                  <span class="nav-text">
+                      Add Request
+                  </span>
+              </a>
+              
+          </li>
+
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+  </body>
+    </html>
+          </div>
+  
+        </div>
+        <div class="col-md-9" id="data">
+          <router-outlet></router-outlet>
+        </div>
+    </div>
+  </div>
+</div>

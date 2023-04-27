@@ -1,0 +1,109 @@
+
+<section class="vh-100" style="background-color: #2779e2;">
+    <div class="container h-100">
+
+      <form [formGroup]="customerDocumentsForm" (submit)="onSendApplication()">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-9">
+  
+          <h1 class="text-white mb-4">You are requested to upload Customer Documents</h1>
+  
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter Customer Id" aria-label="Recipient's Customer Id" aria-describedby="button-addon2" name="id" ngModel #id="ngModel">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2" value="Get Details">Submit</button>
+          </div>
+            
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body">
+  
+              <div class="row align-items-center pt-4 pb-3">
+                <div class="col-md-3 ps-5">
+  
+                  <h6 class="mb-0">Aadhar Number</h6>
+  
+                </div>
+                <div class="col-md-9 pe-5">
+  
+                  <input type="text" class="form-control form-control-lg" formControlName="aadharNumber">
+                  <span class="error_msg" *ngIf="customerDocumentsForm.controls['aadharNumber'].touched && customerDocumentsForm.controls['aadharNumber'].invalid">
+                    <span *ngIf="customerDocumentsForm.controls['aadharNumber'].errors['required']">Aadhar Number is required</span>
+                    <span *ngIf="customerDocumentsForm.controls['aadharNumber'].errors['pattern']">Aadhar Number is required</span>
+                  </span>
+                </div>
+              </div>
+  
+              <hr class="mx-n3">
+  
+              <div class="row align-items-center py-3">
+                <div class="col-md-3 ps-5">
+  
+                  <h6 class="mb-0">Pan Number</h6>
+  
+                </div>
+                <div class="col-md-9 pe-5">
+  
+                  <input type="text" class="form-control form-control-lg" formControlName="panNumber">
+                  <span class="error_msg" *ngIf="customerDocumentsForm.controls['panNumber'].touched && customerDocumentsForm.controls['panNumber'].invalid">
+                    <span *ngIf="customerDocumentsForm.controls['panNumber'].errors['required']">PAN Number is required</span>
+                    <span *ngIf="customerDocumentsForm.controls['panNumber'].errors['pattern']">PAN Number is required</span>
+                  </span>
+                </div>
+              </div>
+  
+              <hr class="mx-n3">
+  
+              <!-- <div class="row align-items-center py-3"> -->
+                
+                <!-- <div class="col-md-9 pe-5">
+  
+                  <textarea class="form-control" rows="3" placeholder="Documents Added"></textarea>
+  
+                </div> -->
+              <!-- </div> -->
+  
+              <!-- <hr class="mx-n3"> -->
+  
+           <div class="row align-items-center py-3">
+                <div class="col-md-3 ps-5">
+  
+                  <h6 class="mb-0">Upload Aadhar</h6>
+  
+                </div>
+                <div class="col-md-9 pe-5">
+  
+                  <input class="form-control form-control-lg" id="formFileLg" type="file" />
+                  <div class="small text-muted mt-2">Upload your Aadhar. Max file
+                    size 2 MB</div>
+  
+                </div>
+              </div>
+              <hr class="mx-n3">
+              <div class="row align-items-center py-3">
+                <div class="col-md-3 ps-5">
+  
+                  <h6 class="mb-0">Upload PAN</h6>
+  
+                </div>
+                <div class="col-md-9 pe-5">
+  
+                  <input class="form-control form-control-lg" id="formFileLg" type="file" />
+                  <div class="small text-muted mt-2">Upload your PAN. Max file
+                    size 2 MB</div>
+  
+                </div>
+              </div>  
+
+              <hr class="mx-n3">
+  
+              <div class="px-5 py-4">
+                <button type="submit" class="btn btn-primary btn-lg">Send application</button>
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      </form>
+    </div>
+  </section>

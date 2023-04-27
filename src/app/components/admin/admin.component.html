@@ -1,0 +1,81 @@
+<div id="container">
+<div>
+    <div class="row">
+        <div class="col-md-2 sidebar">
+          <div >
+              <!-- <img src="../../../assets/images/user.png" class="user-logo"> -->
+  
+              <!-- <span class="welcome-msg"> Welcome {{admin?.name}} </span> -->
+          </div>
+          <div>
+            <br>
+            <html>
+  <head>
+ 
+  </head>
+  <body><div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="/admin/profile">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Profile
+                        </span>
+                    </a>
+                  
+                </li>
+
+                <li class="has-subnav">
+                    <a href="/admin/all-customer">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                            All Custmers
+                        </span>
+                    </a>
+                   
+                </li>
+
+                <li class="has-subnav">
+                    <a href="/admin/all-employees">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                            All Employees
+                        </span>
+                    </a>
+                   
+                </li>
+
+
+                <li class="has-subnav">
+                    <a href="/admin/approve-employee">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Manage Employee
+                        </span>
+                    </a>
+                    
+                </li>
+
+                <li>
+                
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+  </body>
+    </html>
+          </div>
+  
+        </div>
+        <div class="col-md-9" id="data">
+          <router-outlet></router-outlet>
+        </div> 

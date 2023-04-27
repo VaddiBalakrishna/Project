@@ -1,0 +1,43 @@
+<div class="container">
+  <form [formGroup]="loginForm" (submit)="onLogin()">
+      <div class="row d-flex justify-content-center" style="height: fit-content;">
+          
+          <div class="col w-50">
+              <div class="mb-3 alert alert-primary" *ngIf="msg">
+  
+                  {{msg}}
+  
+                </div>
+  
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                class="img-fluid" alt="Sample image">
+  
+          </div>
+  
+          <div class="col w-50 p-5 align-self-center ">
+  
+              <div class="d-flex justify-content-end mb-5">
+                  <div class="w-75 mx-5">
+                      <label for="userName" class="mx-3">Username</label>
+                      <input type="text" class="form-control px-3 rounded-pill" name="userName"
+                          placeholder="Enter your username / " formControlName="username">
+                  </div>
+                  
+              </div>
+              <div class="d-flex justify-content-end mb-5">
+                  <div class="w-75 mx-5">
+                      <label for="pass" class="mx-3">Password</label>
+                      <input type="password" class="form-control px-3 rounded-pill" name="pass"
+                          placeholder="Enter your password" formControlName="password">
+                  </div>
+              </div>
+              <div class="d-flex justify-content-end ">
+                  <div class="mb-5">
+                     <button class="btn btn-primary" [disabled]="!loginForm.valid" (click)="onLogin()">Login</button>
+                     Not Registerd? <a routerLink="/sign-up">sign-up</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>
+  </div>

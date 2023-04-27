@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit()" #updateProfileForm="ngForm">
+    <div class="form-group">
+      <label for="companyName">Company Name</label>
+      <input type="text" class="form-control" id="companyName" name="companyName" [(ngModel)]="updatedCustomer.companyName">
+    </div>
+    <div class="form-group">
+      <label for="mobileNo">Mobile Number</label>
+      <input type="text" class="form-control" id="mobileNo" name="mobileNo" [(ngModel)]="updatedCustomer.mobileNo">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="updatedCustomer.email">
+    </div>
+    <div class="form-group">
+      <label for="panCard">PAN Card</label>
+      <input type="text" class="form-control" id="panCard" name="panCard" [(ngModel)]="updatedCustomer.panCard">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="updateProfileForm.invalid">Update Profile</button>
+  </form>
